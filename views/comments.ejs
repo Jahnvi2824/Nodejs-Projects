@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Comments</title>
+  </head>
+  <body>
+    <h1>Comments</h1>
+
+    <% post.comments.forEach(comment => { %>
+    <div>
+      <p><strong>Name:</strong> <%= comment.name %></p>
+      <p><%= comment.text %></p>
+    </div>
+    <% }) %>
+
+    <h2>Add a Comment</h2>
+    <form action="/comment/<%= post.id %>" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" required></textarea><br />
+
+      <input type="submit" value="Add Comment" />
+    </form>
+  </body>
+</html>

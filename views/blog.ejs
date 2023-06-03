@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Post</title>
+  </head>
+  <body>
+    <h1><%= post.title %></h1>
+    <p><strong>Author:</strong> <%= post.author %></p>
+    <p><strong>Date:</strong> <%= post.date %></p>
+    <p><%= post.content %></p>
+
+    <h2>Comments</h2>
+    <% post.comments.forEach(comment => { %>
+    <div>
+      <p><strong>Name:</strong> <%= comment.name %></p>
+      <p><%= comment.text %></p>
+    </div>
+    <% }) %>
+
+    <h2>Add a Comment</h2>
+    <form action="/comment/<%= post.id %>" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" required></textarea><br />
+
+      <input type="submit" value="Add Comment" />
+    </form>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Post</title>
+  </head>
+  <body>
+    <h1><%= post.title %></h1>
+    <p><strong>Author:</strong> <%= post.author %></p>
+    <p><%= post.content %></p>
+
+    <h2>Comments</h2>
+    <% if (post.comments && post.comments.length > 0) { %> <%
+    post.comments.forEach(comment => { %>
+    <div>
+      <p><strong>Name:</strong> <%= comment.name %></p>
+      <p><%= comment.text %></p>
+    </div>
+    <% }) %> <% } else { %>
+    <p>No comments yet.</p>
+    <% } %>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Post</title>
+  </head>
+  <body>
+    <h1><%= post.title %></h1>
+    <p><strong>Author:</strong> <%= post.author %></p>
+    <p><%= post.content %></p>
+
+    <h2>Comments</h2>
+    <% if (post.comments && post.comments.length > 0) { %> <%
+    post.comments.forEach(comment => { %>
+    <div>
+      <p><strong>Name:</strong> <%= comment.name %></p>
+      <p><%= comment.text %></p>
+    </div>
+    <% }) %> <% } else { %>
+    <p>No comments yet.</p>
+    <% } %>
+  </body>
+</html>
