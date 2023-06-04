@@ -287,6 +287,6 @@ function validateComment(comment) {
   return errors;
 }
 
-app.listen(3020, () => {
-  console.log("Server is running on port 3020");
+app.listen(3080, () => {
+  console.log("Server is running on port 3080");
 });
